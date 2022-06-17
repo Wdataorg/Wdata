@@ -1,1 +1,0 @@
-- [logo.svg](https://raw.githubusercontent.com/Wdataorg/Wdata/main/img/logo.svg?token=GHSAT0AAAAAABVWSIL7CYRS5G5DO4DLFXSKYVL56AQ)
