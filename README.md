@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/Wdataorg/Wdata/main/img/logo.svg?token=GHSAT0AAAAAABVWTCRUTQCTDMBCRF2RHCYOYVL652Q" height=200/>
+<img src="https://raw.githubusercontent.com/Wdataorg/Wdata/main/img/logo.svg" height=200/>
 
 [![Issues](https://img.shields.io/github/issues/Wdataorg/Wdata?style=for-the-badge&color=yellogreen)](https://github.com/Wdataorg/Wdata/issues)
 [![Forks](https://img.shields.io/github/forks/Wdataorg/Wdata?style=for-the-badge&color=orange)](https://github.com/Wdataorg/Wdata/network/members)
