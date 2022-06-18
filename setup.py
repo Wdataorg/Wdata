@@ -19,11 +19,10 @@ AUTHOR_EMAIL = "rainwang_20220102@163.com"
 MAINTAINER = 'Wdataorg'
 MAINTAINER_EMAIL = "rainwang_20220102@163.com"
 URL = "https://https://github.com/Wdataorg/Wdata"
-LICENSE = read('LICENSE')
 DESCRIPTION = 'A database with multiple data sets that support drawing, These data sets are: World population data set, World Carbon dioxide Concentration data set, World Number of Cities data set, China number of population data set, China number of space vehicles data set......'
 LONG_DESCRIPTION = '\n'.join([DESCRIPTION, read('README.md')])
-REQUIREMENTS = read('requirements.txt').splitlines()
-PACKAGES = ['Wdata', 'Wdata.read', 'Wdata.error', 'Wdata.json']
+REQUIREMENTS = ['setuptools~=62.3.4']
+PACKAGES = ['Wdata', 'Wdata.json', 'Wdata.read', 'Wdata.Error']
 python_requires = '>=3.6'
 
 setup(
@@ -34,7 +33,6 @@ setup(
     maintainer=MAINTAINER,
     maintainer_email=MAINTAINER_EMAIL,
     url=URL,
-    license=LICENSE,
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     install_requires=REQUIREMENTS,
