@@ -8,15 +8,13 @@ Project Name: Wdata
 import json
 
 def read_dict(json_fname: str) -> str:
-    with open(f'../json/{json_fname}.json') as file:
-        json_file = file.read()
-
-    return json.loads(json_file)['datas']
+    with open(f'./{json_fname}.json', mode="w+") as file:
+        return json.load(file)['datas']
 
 def read_json(json_fname: str) -> str:
-    with open(f'../json/{json_fname}') as file:
-        json_file = json.loads(file.read())
-        json_file = json_file['data']
+    with open(f'./{json_fname}.json') as file:
+        json_file = json.load(file)
+        json_file = json_file['datas']
 
     return json_file
 

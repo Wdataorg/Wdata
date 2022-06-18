@@ -1,4 +1,5 @@
 python setup.py sdist
+twine upload dist/*
 cd dist
 pip3 install ./Wdata-1.0.0.tar.gz
 cd ../
