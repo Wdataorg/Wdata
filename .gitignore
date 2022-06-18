@@ -9,6 +9,9 @@ __pycache__/
 # Vscode
 .vscode
 
+# Pypi file
+*.pypirc
+
 # Distribution / packaging
 .Python
 build/
