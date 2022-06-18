@@ -22,11 +22,6 @@ China number of space vehicles data set......
 class Wdata(object):
     def __init__(self, jsonname: str):
         self.jsonname = jsonname
-        try:
-            with open(f'../json/{self.jsonname}.json'):
-                pass
-        except FileNotFoundError:
-            raise JsonError
 
     def Fetch_dict(self):
         return read.read_dict(self.jsonname)
@@ -39,3 +34,5 @@ class Wdata(object):
         except FileNotFoundError:
             return False
 
+test = Wdata("Population_growth")
+print(test.Fetch_dict())
