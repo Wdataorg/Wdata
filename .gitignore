@@ -11,6 +11,7 @@ __pycache__/
 
 # Pypi file
 *.pypirc
+Wdata-1.0.0
 
 # Distribution / packaging
 .Python
