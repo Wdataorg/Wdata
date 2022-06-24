@@ -1,2 +1,3 @@
-# import test2
-# test2.hello('sbsbsbsbsb')
+from Wdata import Wdata
+
+test = Wdata.Fetch_dict('Population_growth')

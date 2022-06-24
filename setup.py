@@ -22,7 +22,7 @@ URL = "https://https://github.com/Wdataorg/Wdata"
 DESCRIPTION = 'A database with multiple data sets that support drawing, These data sets are: World population data set, World Carbon dioxide Concentration data set, World Number of Cities data set, China number of population data set, China number of space vehicles data set......'
 LONG_DESCRIPTION = '\n'.join([DESCRIPTION, read('README.md')])
 REQUIREMENTS = ['setuptools~=62.3.4']
-PACKAGES = ['Wdata', 'Wdata.json', 'Wdata.read', 'Wdata.Error']
+PACKAGES = ['Wdata', 'Wdata.json_data', 'Wdata.read', 'Wdata.Error']
 python_requires = '>=3.6'
 
 setup(

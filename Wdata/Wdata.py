@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
-import read
-from Error import JsonError
+import Wdata.read
+from Wdata.Error import JsonError
 from json import dump
 
 """
@@ -19,20 +19,18 @@ China number of population data set,
 China number of space vehicles data set......
 """
 
-class Wdata(object):
+class Wdata_class(object):
     def __init__(self, jsonname: str):
         self.jsonname = jsonname
 
     def Fetch_dict(self):
-        return read.read_dict(self.jsonname)
+        return Wdata.read.read_dict(self.jsonname)
 
     def Save_file(self, filename: str):
         try:
             with open(f'{filename}.json') as file:
-                dump(read.read_json(self.jsonname))
+                dump(Wdata.read.read_json(self.jsonname))
             return True
         except FileNotFoundError:
             return False
 
-test = Wdata("Population_growth")
-print(test.Fetch_dict())
