@@ -6,4 +6,5 @@ Project Name: Wdata
 """
 
 class JsonError(Exception):
-    """There is no corresponding Json dataset"""
+    def __init__(self, message):
+        super().__init__(message)

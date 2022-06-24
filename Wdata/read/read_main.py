@@ -9,7 +9,7 @@ import json
 
 def read_dict(json_fname: str) -> str:
     with open(f'./{json_fname}.json', mode="w+") as file:
-        return json.load(file)['datas']
+        return json.load(file)
 
 def read_json(json_fname: str) -> str:
     with open(f'./{json_fname}.json') as file:
