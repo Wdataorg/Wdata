@@ -1,0 +1,3 @@
+[flake8]
+exclude = .gitignore, .git, __pycache__, Wdata/Error/__init__.py, Wdata/json_data/*, Wdata/read/read_main.py, Wdata/__init__.py, Wdata/version.py
+filename = Wdata/Wdata.py, Wdata/Error/error_main.py, Wdata/read/read_main.py
