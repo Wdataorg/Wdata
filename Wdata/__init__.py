@@ -7,4 +7,4 @@ Project Name: Wdata
 
 import sys
 sys.path.append("..")
-from Wdata.Wdata import Wdata
+from Wdata.Wdata import Wdata_class
