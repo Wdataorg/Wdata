@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 
-from plot import line_chart
-from read import *
-from error import JsonError
+from Wdata.plot import line_chart
+from Wdata.read import *
+from Wdata.error import JsonError
 from json import dump
 
 
@@ -34,8 +34,8 @@ class Wdata_class(object):
 
     def Save_file(self, filename: str):
         try:
-            with open(f'{filename}.json') as file:
-                dump(read_json(self.jsonname))
+            with open(f'{filename}.json', 'w+') as file:
+                dump(read_json(self.jsonname), file)
             return True
         except FileNotFoundError:
             raise JsonError('There is no corresponding Json file')
@@ -47,7 +47,3 @@ class Wdata_class(object):
         if result[1] == 'Line Chart':
             print('Plot the data for data {}'.format(self.jsonname))
             line_chart(result[0], self.jsonname)
-# for assets
-
-test = Wdata_class('Population_growth')
-test.draw()
