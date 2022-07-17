@@ -6,24 +6,25 @@ Project Name: Wdata
 """
 
 from setuptools import setup
-from Wdata.version import  __VERSION__
+from Wdata.version import __VERSION__
 
 def read(filename: str) -> str:
     with open(filename, 'r+') as file:
         return file.read()
 
-NAME = "Wdata"
+NAME = "Wdatabase"
 VERSION = __VERSION__
 AUTHOR = 'Wdataorg'
 AUTHOR_EMAIL = "rainwang_20220102@163.com"
 MAINTAINER = 'Wdataorg'
 MAINTAINER_EMAIL = "rainwang_20220102@163.com"
-URL = "https://https://github.com/Wdataorg/Wdata"
+URL = "https://github.com/Wdataorg/Wdata"
 DESCRIPTION = 'A database with multiple data sets that support drawing, These data sets are: World population data set, World Carbon dioxide Concentration data set, World Number of Cities data set, China number of population data set, China number of space vehicles data set......'
 LONG_DESCRIPTION = '\n'.join([DESCRIPTION, read('README.md')])
 REQUIREMENTS = ['setuptools~=62.3.4']
-PACKAGES = ['Wdata', 'Wdata.json_data', 'Wdata.read', 'Wdata.Error']
+PACKAGES = ['Wdata', 'Wdata.read', 'Wdata.Error']
 python_requires = '>=3.6'
+LICENSE = read('LICENSE')
 
 setup(
     name=NAME,
@@ -45,8 +46,13 @@ setup(
             'Funding': 'https://wdataorg.github.io/Sponsor/',
         },
     classifiers=[
-            'Topic :: Data',
+            'Environment :: Console',
+            'Natural Language :: Chinese (Simplified)',
+            'Natural Language :: English',
+            'Operating System :: Microsoft :: Windows',
+            'Operating System :: Microsoft :: Windows :: Windows 10',
             'Development Status :: 5 - Production/Stable',
+            'Topic :: Database :: Database Engines/Servers',
             'Environment :: Console',
             'Programming Language :: Python',
             'Programming Language :: Python :: 3.6',
@@ -58,8 +64,8 @@ setup(
             'Programming Language :: Python :: Implementation',
             'Programming Language :: Python :: Implementation :: CPython',
             'Programming Language :: Python :: Implementation :: PyPy',
-            'License :: Apache License 2.0',
-            'Operating System :: OS Independent',
+            'Operating System :: OS Independent'
         ],
-    python_requires=python_requires
+    python_requires=python_requires,
+    license=LICENSE
 )

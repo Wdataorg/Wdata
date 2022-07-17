@@ -11,7 +11,8 @@ __pycache__/
 
 # Pypi file
 *.pypirc
-Wdata-1.0.0
+Wdatabase-1.0.0
+passwd_uld
 
 # Distribution / packaging
 .Python

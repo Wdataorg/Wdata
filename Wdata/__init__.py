@@ -5,6 +5,4 @@ Date: 2022.06.17
 Project Name: Wdata
 """
 
-import sys
-sys.path.append("..")
-from Wdata.main import Wdata_class
+from .main import Wdata_class

@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
 
-from Wdata.plot import line_chart
-from Wdata.read import *
-from Wdata.error import JsonError
+from .data_py import data_list
+from .plot import line_chart
+from .read import *
+from .error import JsonError
 from json import dump
 
 
@@ -21,21 +22,25 @@ China number of population data set,
 China number of space vehicles data set......
 """
 
+DATA_LIST = data_list
+
 class Wdata_class(object):
     def __init__(self, jsonname: str):
         self.jsonname = jsonname
+        if not(self.jsonname in DATA_LIST):
+            raise JsonError("There is no dataset {}".format(self.jsonname))
 
     def Fetch_dict(self):
         try:
             return read_dict(self.jsonname)
         except Exception as ex:
             raise JsonError(ex)
-        return Wdata.read.read_dict(self.jsonname)
+        return read_dict(self.jsonname)
 
     def Save_file(self, filename: str):
         try:
             with open(f'{filename}.json', 'w+') as file:
-                dump(read_json(self.jsonname), file)
+                dump(read_dict(self.jsonname), file)
             return True
         except FileNotFoundError:
             raise JsonError('There is no corresponding Json file')

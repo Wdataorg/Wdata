@@ -1,1 +1,1 @@
-from Wdata.read.read_main import *
+from .read_main import *
