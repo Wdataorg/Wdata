@@ -97,4 +97,4 @@ test = main('Population_growth') # 导入200年来人口增长
 test.draw()
 ```
 结果是这样的
-<img src="./img/draw_pop.jpg"></img>
+<img src="https://raw.githubusercontent.com/Wdataorg/Wdata/main/img/draw_pop.jpg"></img>
