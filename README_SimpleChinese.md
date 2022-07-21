@@ -9,7 +9,7 @@
 [![Commits](https://img.shields.io/github/commit-activity/m/Wdataorg/Wdata?label=commits&style=for-the-badge&color=blue)](https://github.com/Wdataorg/Wdata/commits "Commit History")
  [![Release version](https://img.shields.io/github/v/release/Wdataorg/Wdata?color=brightgreen&label=Download&style=for-the-badge)](#release-files "Release")
 
- [English](https://github.com/Wdataorg/Wdata/README.md)
+ [English](https://github.com/Wdataorg/Wdata/#readme)
 
 </div>
 
