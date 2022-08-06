@@ -7,7 +7,7 @@ Project Name: Wdata
 
 from os import system
 
-with open('passwd_uld', 'r+') as file:
+with open(r'D:\password\passwd_uld', 'r+') as file:
     passwd = file.read()
 
 gen_list = ['sdist', 'bdist', 'bdist_egg', 'bdist_rpm']
