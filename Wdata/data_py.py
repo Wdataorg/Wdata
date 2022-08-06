@@ -55,4 +55,3 @@ data = {
     }
 }
 
-data_list = list(data.keys())

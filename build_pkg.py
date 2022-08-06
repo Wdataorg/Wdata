@@ -10,7 +10,12 @@ from os import system
 with open('passwd_uld', 'r+') as file:
     passwd = file.read()
 
-system(r'C:\Users\S.X.Y\AppData\Local\Programs\Python\Python310\python.exe setup.py bdist_egg')
+gen_list = ['sdist', 'bdist', 'bdist_egg', 'bdist_rpm']
+
+for gen_type in gen_list:
+    system(r'C:\Users\S.X.Y\AppData\Local\Programs\Python\Python310\python.exe setup.py {}'.format(gen_type))
+    system(r'C:\Users\S.X.Y\AppData\Local\Programs\Python\Python38-32\python.exe setup.py {}'.format(gen_type))
+
 system(r'C:\Users\S.X.Y\AppData\Local\Programs\Python\Python310\python.exe  -m  twine upload  -u __token__ -p {} dist/*'.format(passwd))
 system(r'''
         del  /S /Q build;

@@ -9,7 +9,7 @@ from setuptools import setup
 from Wdata.version import __VERSION__
 
 def read(filename: str) -> str:
-    with open(filename, 'r+') as file:
+    with open(filename, 'r+', encoding='utf-8') as file:
         return file.read()
 
 NAME = "Wdatabase"

@@ -16,10 +16,11 @@
 - [功能介绍](#功能介绍)
 - [下载](#下载)
 - [使用](#使用)
+    - [获取数据](#获取数据)
     - [导入数据](#导入数据)
     - [绘图](#绘图)
     - [保存文件](#数据保存)
-- [我们有哪些数据](#数据)
+- [我们有哪些数据](#我们有哪些数据)
 - [捐款](#捐款)
 - [有关Pypi](#有关Pypi)
 - [许可证](#许可证)
@@ -71,7 +72,7 @@ print(test.Fetch_dict())
 ```
 
 运行后
-```
+```shell
 ~/python test.py
 {   
     '1800': 900000000,
@@ -98,3 +99,53 @@ test.draw()
 ```
 结果是这样的
 <img src="https://raw.githubusercontent.com/Wdataorg/Wdata/main/img/draw_pop.jpg"></img>
+
+## 数据保存
+你可以使用`Save_file()`函数来保存数据
+
+`Save_file`的语法是`Save_file(filename:str) -> None`
+
+参数说明：
+`filename`参数是用于说明保存文件，保存位置一般位于使用该函数的上一个文件夹里(`..`)
+
+如以下代码
+```python
+from Wdata import Wdata_class as main 
+test = main('Population_growth') # 导入200年来人口增长
+test.Save_file('Package_test') # 该函数会自动添加.json后缀
+```
+
+# 我们有哪些数据
+目前我们有以下数据
+
+|                名字                |          说明           |   计量单位    | 
+|:--------------------------------:|:---------------------:|:---------:|
+|        Population_growth         |    1800-2022年人口增长     |     人     |
+|        Chinese_spacecraft        | 2017-2020.06中国航天器发射次数 |    航天器    |
+|    World_spacecraft              | 2017-2020.06世界航天器发射次数 |    航天器    |
+> 以上数据来源于Bing以及Baidu,作者无法确保数据的准确性，切勿用于专业用途
+
+# 捐款
+由于特殊原因，作者无法注册`Paypal`账号，被迫使用支付宝
+
+具体详情请见[捐款说明](https://wdataorg.github.io/Sponsor/)
+
+# 有关Pypi
+`Wdataorg`团队已经使用`twine`将本库上传到`Pypi`
+
+[Wdataorg Pypi账号](https://pypi.org/user/Lucky_Pupil/)
+
+[Wdatabase Pypi仓库地址](https://pypi.org/project/Wdatabase/)
+
+# 许可证
+本开源项目使用`Apache License 2.0`
+
+在使用本开源项目过程中，请严格按照许可证规定使用
+
+最终解释权归开发团队`Wdataorg`所有
+
+[项目许可证链接](https://github.com/Wdataorg/Wdata/blob/main/LICENSE)
+
+# 我们的内测
+
+内测将在版本`0.0.1b0`中开始，我们期待使用者们提出的意见。
