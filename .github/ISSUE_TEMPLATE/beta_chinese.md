@@ -1,0 +1,28 @@
+---
+name: Beta_Chinese
+about: Beta for version 0.0.1b0
+title: Beta_Chinese
+labels: ''
+assignees: ''
+
+---
+
+## 您对此项目的感受
+
+- [ ] 使用体验非常好
+- [ ] 使用体验比较好
+- [ ] 有待改进(一般)
+- [ ] 使用体验比较差
+- [ ] 使用体验非常差
+
+## 您对此项目的意见
+
+### 功能
+ 
+### 结构
+
+### 性能
+
+### 其他
+
+> 如果您想要反馈Bug, 建议你使用`Bug Report`议题模板
