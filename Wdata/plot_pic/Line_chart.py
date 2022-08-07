@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import math
 
 def line_chart(data: dict, title: str) -> None:
     plt.rcParams['font.sans-serif'] = ['SimHei']

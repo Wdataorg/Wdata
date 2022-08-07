@@ -1,1 +1,2 @@
-setuptools~=62.3.4
+setuptools~=58.1.0
+matplotlib~=3.5.2

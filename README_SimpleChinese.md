@@ -106,7 +106,7 @@ test.draw()
 `Save_file`的语法是`Save_file(filename:str) -> None`
 
 参数说明：
-`filename`参数是用于说明保存文件，保存位置一般位于使用该函数的上一个文件夹里(`..`)
+`filename`参数是用于说明保存文件
 
 如以下代码
 ```python

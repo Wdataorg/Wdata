@@ -8,7 +8,7 @@ Project Name: Wdata
 from ..data_py import data
 
 
-def read_dict(fname: str) -> str:
+def read_dict(fname: str) -> dict:
     return data[fname]['datas']
 
 def read_dict_draw(fname:str) -> list:
