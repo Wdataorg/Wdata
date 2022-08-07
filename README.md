@@ -19,13 +19,13 @@
 - [Function introduction](#Features)
 - [download](#Download)
 - [use](#Use)
-    - [Get data](#Get data)
-    - [import data](#Import data)
+    - [Get data](#Get-data)
+    - [import data](#Import-data)
     - [drawing](#Drawing)
-    - [save file](#Data save)
-- [What data do we have](#What data do we have)
+    - [Data save](#Data-save)
+- [What data do we have](#What-data-do-we-have)
 - [Donation](#Donate)
-- [About Pypi](#About Pypi)
+- [About Pypi](#About-Pypi)
 - [license](#License)
 - [our internal test](#Our closed beta)
 
@@ -64,7 +64,7 @@ from Wdata import Wdata_class as main
 test = main('Population_growth') # import population growth over 200 years
 ````
 
-## Retrieve data
+## Get data
 We can use the `Fetch_dict` function to fetch the data
 
 such as these codes
