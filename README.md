@@ -27,7 +27,7 @@
 - [Donation](#Donate)
 - [About Pypi](#About-Pypi)
 - [license](#License)
-- [our internal test](#Our closed beta)
+- [our internal test](#Our-closed-beta)
 
 # Features
 
