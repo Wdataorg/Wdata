@@ -151,4 +151,8 @@ The final interpretation right belongs to the development team `Wdataorg`
 
 # Our closed beta
 
-The closed beta will start in version `0.0.1b0`, and we look forward to the feedback from users.
+`0.0.1b0` version has been released, users can put forward their valuable opinions
+
+How to test?
+
+Please follow the README instructions to download the project and use it, fill in the internal test form
