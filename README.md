@@ -16,18 +16,18 @@
  **You can use the Watch feature to keep an eye on Wdata project development.**
 </div>
 
-- [Function introduction](#function introduction)
-- [download](#download)
-- [use](#use)
+- [Function introduction](#Features)
+- [download](#Download)
+- [use](#Use)
     - [Get data](#Get data)
-    - [import data](#import data)
-    - [drawing](#drawing)
-    - [save file](#data save)
-- [What data do we have] (#What data do we have)
-- [Donation](#donation)
+    - [import data](#Import data)
+    - [drawing](#Drawing)
+    - [save file](#Data save)
+- [What data do we have](#What data do we have)
+- [Donation](#Donate)
 - [About Pypi](#About Pypi)
-- [license](#license)
-- [our internal test] (#our internal test)
+- [license](#License)
+- [our internal test](#Our closed beta)
 
 # Features
 
