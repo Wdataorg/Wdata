@@ -11,9 +11,7 @@
  
  [简体中文](https://github.com/Wdataorg/Wdata/tree/main/README_SimpleChinese.md)
 
- **The README is still being written and the Wdata project is still under development......**
- 
- **You can use the Watch feature to keep an eye on Wdata project development.**
+
 </div>
 
 - [Function introduction](#Features)
