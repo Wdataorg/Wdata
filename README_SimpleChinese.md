@@ -39,8 +39,9 @@
 
 我们上传时包名和实际使用时用的包名不太一样
 导入时，使用以下代码
+
 ```python
-from Wdata import Wdata_class as main
+from Wdata import WdataMain as main
 ```
 主类中有以下函数：
 
@@ -56,18 +57,22 @@ Wdata_class的语法如下:
 `Wdata_class(json_fname: str)`
 
 `json_fname`为数据集的名字
+
 ```python
-from Wdata import Wdata_class as main 
-test = main('Population_growth') # 导入200年来人口增长
+from Wdata import WdataMain as main
+
+test = main('Population_growth')  # 导入200年来人口增长
 ```
 
 ## 获取数据
 我们可以使用`Fetch_dict`函数获取数据
 
 比如这些代码
+
 ```python
-from Wdata import Wdata_class as main 
-test = main('Population_growth') # 导入200年来人口增长
+from Wdata import WdataMain as main
+
+test = main('Population_growth')  # 导入200年来人口增长
 print(test.Fetch_dict())
 ```
 
@@ -92,9 +97,11 @@ print(test.Fetch_dict())
 ## 绘图
 绘图功能使用`draw()`函数
 如以下代码
+
 ```python
-from Wdata import Wdata_class as main 
-test = main('Population_growth') # 导入200年来人口增长
+from Wdata import WdataMain as main
+
+test = main('Population_growth')  # 导入200年来人口增长
 test.draw()
 ```
 结果是这样的
@@ -109,10 +116,12 @@ test.draw()
 `filename`参数是用于说明保存文件
 
 如以下代码
+
 ```python
-from Wdata import Wdata_class as main 
-test = main('Population_growth') # 导入200年来人口增长
-test.Save_file('Package_test') # 该函数会自动添加.json后缀
+from Wdata import WdataMain as main
+
+test = main('Population_growth')  # 导入200年来人口增长
+test.Save_file('Package_test')  # 该函数会自动添加.json后缀
 ```
 
 # 我们有哪些数据

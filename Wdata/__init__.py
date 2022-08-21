@@ -5,4 +5,4 @@ Date: 2022.06.17
 Project Name: Wdata
 """
 
-from .main import Wdata_class
+from .main import WdataMain

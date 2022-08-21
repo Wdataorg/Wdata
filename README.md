@@ -42,8 +42,9 @@ Code: `pip3 install Wdatabase`
 
 The package name when we upload is not the same as the package name used in actual use
 When importing, use the following code
+
 ````python
-from Wdata import Wdata_class as main
+from Wdata import WdataMain as main
 ````
 The main class has the following functions:
 
@@ -59,18 +60,22 @@ The syntax of Wdata_class is as follows:
 `Wdata_class(json_fname: str)`
 
 `json_fname` is the name of the dataset
+
 ````python
-from Wdata import Wdata_class as main
-test = main('Population_growth') # import population growth over 200 years
+from Wdata import WdataMain as main
+
+test = main('Population_growth')  # import population growth over 200 years
 ````
 
 ## Get data
 We can use the `Fetch_dict` function to fetch the data
 
 such as these codes
+
 ````python
-from Wdata import Wdata_class as main
-test = main('Population_growth') # import population growth over 200 years
+from Wdata import WdataMain as main
+
+test = main('Population_growth')  # import population growth over 200 years
 print(test.Fetch_dict())
 ````
 
@@ -95,9 +100,11 @@ after running
 ## Drawing
 Drawing functions use the `draw()` function
 as the following code
+
 ````python
-from Wdata import Wdata_class as main
-test = main('Population_growth') # import population growth over 200 years
+from Wdata import WdataMain as main
+
+test = main('Population_growth')  # import population growth over 200 years
 test.draw()
 ````
 The result is this
@@ -112,10 +119,12 @@ Parameter Description:
 The `filename` parameter is used to describe the save file
 
 as the following code
+
 ````python
-from Wdata import Wdata_class as main
-test = main('Population_growth') # import population growth over 200 years
-test.Save_file('Package_test') # This function will automatically add the .json suffix
+from Wdata import WdataMain as main
+
+test = main('Population_growth')  # import population growth over 200 years
+test.Save_file('Package_test')  # This function will automatically add the .json suffix
 ````
 
 # What data do we have
