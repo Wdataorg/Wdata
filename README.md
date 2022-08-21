@@ -25,7 +25,6 @@
 - [Donation](#Donate)
 - [About Pypi](#About-Pypi)
 - [license](#License)
-- [our internal test](#Our-closed-beta)
 
 # Features
 
@@ -46,16 +45,15 @@ from Wdata import WdataMain as main
 ````
 The main class has the following functions:
 
-|Functions|Introduction|Syntax|Return Type|
-|:-------:|:--------:|:--------:|:--------:|
-|Fetch_dict|Get data|Func()|dict|
-|draw|Draw|Func()|None|
-|Save_file|Save file|Func(filename:str)|bool|
+| Functions | Introduction |       Syntax       | Return Type |
+|:---------:|:------------:|:------------------:|:-----------:|
+|   draw    |    Draw      |      Func()        |    None     |
+| Save_file |  Save file   | Func(filename:str) |    bool     |
 ## Import Data
 Wdata has a lot of data sets, here we use 200 years of population growth data as an example
 
 The syntax of Wdata_class is as follows:
-`Wdata_class(json_fname: str)`
+`WdataMain(json_fname: str)`
 
 `json_fname` is the name of the dataset
 
@@ -66,7 +64,7 @@ test = main('Population_growth')  # import population growth over 200 years
 ````
 
 ## Get data
-We can use the `Fetch_dict` function to fetch the data
+We can use the `dict()` function to fetch the data
 
 such as these codes
 
@@ -74,7 +72,7 @@ such as these codes
 from Wdata import WdataMain as main
 
 test = main('Population_growth')  # import population growth over 200 years
-print(test.Fetch_dict())
+print(dict(test))
 ````
 
 after running
@@ -156,10 +154,3 @@ The final interpretation right belongs to the development team `Wdataorg`
 
 [Project License Link](https://github.com/Wdataorg/Wdata/blob/main/LICENSE)
 
-# Our closed beta
-
-`0.0.1b0` version has been released, users can put forward their valuable opinions
-
-How to test?
-
-Please follow the README instructions to download the project and use it, fill in the internal test form
