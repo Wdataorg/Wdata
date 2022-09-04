@@ -105,4 +105,4 @@ class WdataMain():
         In year:2000, people_growth:5900000000
         In year:2022, people_growth:7400000000
         """
-        return list(self.Fetch_dict().items())[item]
+        return list(self.__dict__())[item]
