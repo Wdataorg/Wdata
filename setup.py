@@ -71,6 +71,5 @@ setup(
             'Operating System :: OS Independent'
         ],
     python_requires=python_requires,
-    license=LICENSE,
-    requires=REQUIREMENTS
+    license=LICENSE
 )

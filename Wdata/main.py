@@ -6,7 +6,7 @@ from .plot_pic import line_chart
 from .read import *
 from .all_error import (JsonError, FileTypeError)
 from json import dump
-from openpyxl import workbook
+# from openpyxl import workbook
 
 JSON = "json"
 XLSX = "xlsx"
@@ -74,7 +74,7 @@ class WdataMain():
         return '<WdataMain jsonname="{}" Data={}>'.format(self.__jsonname, dict(self))
 
     def __list__(self):
-        return list(self.__dict__())
+        return list(self.__dict__().items())
 
     def __eq__(self, other):
         if self.__jsonname == other.__jsonname:
@@ -105,4 +105,4 @@ class WdataMain():
         In year:2000, people_growth:5900000000
         In year:2022, people_growth:7400000000
         """
-        return list(self.__dict__())[item]
+        return list(self.__dict__().items())[item]
