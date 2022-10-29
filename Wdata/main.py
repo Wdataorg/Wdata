@@ -37,6 +37,9 @@ class WdataMain():
     def __dict__(self) -> dict:
         return read_dict(self.__jsonname)
 
+    def __map_str(self, x:list)-> list:
+        return list(map(lambda y:str(y), x))
+
     def Save_file(self, filename: str, type=JSON) -> None:
         if not(type in [JSON, CSV, XLSX]):
             raise FileTypeError('No file type {}'.format(type))
@@ -50,7 +53,10 @@ class WdataMain():
             pass
 
         elif type == CSV:
-            pass
+            with open(f'{filename}.csv', 'w+') as file:
+                years_list = self.__map_str(list(read_dict(self.__jsonname.keys())))
+                value_list = self.__map_str(list(read_dict(self.__jsonname.values())))
+                file.write("{}\n{}".format(','.join(years_list), ','.join(value_list)))
 
     def __read_json_draw(self) -> dict:
         return read_dict_draw(self.__jsonname)

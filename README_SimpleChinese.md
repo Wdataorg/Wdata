@@ -47,7 +47,6 @@ from Wdata import WdataMain as main
 
 |函数|介绍|语法|返回类型|
 |:--------:|:--------:|:--------:|:--------:|
-|Fetch_dict|获取数据|Func()|dict|
 |draw|绘图|Func()|None|
 |Save_file|保存文档|Func(filename:str)|bool|
 ## 导入数据
@@ -73,7 +72,7 @@ test = main('Population_growth')  # 导入200年来人口增长
 from Wdata import WdataMain as main
 
 test = main('Population_growth')  # 导入200年来人口增长
-print(test.Fetch_dict())
+print(dict(test))
 ```
 
 运行后
