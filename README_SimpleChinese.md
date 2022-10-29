@@ -109,18 +109,26 @@ test.draw()
 ## 数据保存
 你可以使用`Save_file()`函数来保存数据
 
-`Save_file`的语法是`Save_file(filename:str) -> None`
+`Save_file`的语法是`Save_file(filename:str, type=JSON) -> None`
 
 参数说明：
 `filename`参数是用于说明保存文件
+`type`参数是用于说明文件类型
+
+文件类型有以下几个:
+
+|文件类型|使用方式|说明|
+|:---:|:---:|:---:|
+|csv|Wdata.CSV|保存文件`file.csv`|
+|json|Wdata.JSON|保存文件`file.json`，为默认选项|
 
 如以下代码
 
 ```python
 from Wdata import WdataMain as main
-
+from Wdata import CSV
 test = main('Population_growth')  # 导入200年来人口增长
-test.Save_file('Package_test')  # 该函数会自动添加.json后缀
+test.Save_file('Package_test', CSV)  # 该函数会自动添加.csv后缀
 ```
 
 # 我们有哪些数据

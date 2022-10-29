@@ -109,20 +109,24 @@ The result is this
 ## Data save
 You can use the `Save_file()` function to save data
 
-The syntax of `Save_file` is `Save_file(filename:str) -> None`
+The syntax of `Save_file` is `Save_file(filename:str, type=JSON) -> None`
 
-Parameter Description:
-The `filename` parameter is used to describe the save file
+Parameter description:
+The `filename` 'parameter is used to describe saving a file
+The `type` 'parameter is used to describe the file type
+The file types are as follows:
 
-as the following code
-
-````python
+|File Type | Usage | Description|
+|:---:|:---:|:---:|
+|Csv | Wdata. CSV | Save File ` file.csv`|
+|Json | Wdata. JSON | Save the file 'file. json' as the default option|
+Such as the following code
+```python
 from Wdata import WdataMain as main
-
-test = main('Population_growth')  # import population growth over 200 years
-test.Save_file('Package_test')  # This function will automatically add the .json suffix
-````
-
+from Wdata import CSV
+test=main ('Population_growth ') # Import the Population growth in the past 200 years
+test. Save_ File ('Package_test ', CSV) # This function will automatically add the. csv suffix
+```
 # What data do we have
 Currently we have the following data
 
