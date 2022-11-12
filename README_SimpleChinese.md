@@ -20,6 +20,9 @@
     - [导入数据](#导入数据)
     - [绘图](#绘图)
     - [保存文件](#数据保存)
+- [附加功能](#附加功能)
+    - [余弦相似度函数](#余弦相似度函数)
+    - [距离函数](#距离函数)
 - [我们有哪些数据](#我们有哪些数据)
 - [捐款](#捐款)
 - [有关Pypi](#有关Pypi)
@@ -129,6 +132,36 @@ from Wdata import WdataMain as main
 from Wdata import CSV
 test = main('Population_growth')  # 导入200年来人口增长
 test.Save_file('Package_test', CSV)  # 该函数会自动添加.csv后缀
+```
+
+# 附加功能
+
+## 余弦相似度函数
+
+余弦相似度函数可以根据余弦相似度公式计算出二维空间中两个坐标的余弦相似度
+
+使用方法：
+
+```python
+from Wdata import mathfunc
+xy1 = (2, 3) #  第一个坐标
+xy2 = (3, 5) # 第二个坐标
+result = mathfunc.similarity(xy1, xy2) # 余弦相似度
+print(result)
+```
+
+## 距离公式
+
+距离公式使用欧几里得距离公式计算出二维空间中两个坐标的距离
+
+使用方法：
+
+```python
+from Wdata import mathfunc
+xy1 = (2, 3)
+xy2 = (3, 5)
+result = mathfunc.distance(xy1, xy2) # 距离公式
+print(result)
 ```
 
 # 我们有哪些数据

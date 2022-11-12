@@ -5,4 +5,4 @@ Date: 2022.06.17
 Project Name: Wdata
 """
 
-__VERSION__ = '2.1.1'
+__VERSION__ = '2.2.0'

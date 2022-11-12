@@ -6,3 +6,4 @@ Project Name: Wdata
 """
 
 from .main import WdataMain
+from . import mathfunc

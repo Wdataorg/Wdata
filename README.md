@@ -21,6 +21,9 @@
     - [import data](#Import-data)
     - [drawing](#Drawing)
     - [Data save](#Data-save)
+- [Additional Features](#Additional-Features)
+    - [Cosine similarity function](#Cosine-similarity-function)
+    - [Distance formula](#Distance-formula)
 - [What data do we have](#What-data-do-we-have)
 - [Donation](#Donate)
 - [About Pypi](#About-Pypi)
@@ -127,6 +130,29 @@ from Wdata import CSV
 test=main ('Population_growth ') # Import the Population growth in the past 200 years
 test. Save_ File ('Package_test ', CSV) # This function will automatically add the. csv suffix
 ```
+
+# Additional Features
+## Cosine similarity function
+The cosine similarity function can calculate the cosine similarity of two coordinates in two-dimensional space according to the cosine similarity formula
+usage method:
+```python
+from Wdata import mathfunc
+Xy1=(2, 3) # First coordinate
+Xy2=(3, 5) # Second coordinate
+Result=mathfunc.similarity (xy1, xy2) # Cosine similarity
+print(result)
+```
+## Distance formula
+Distance formula Use Euclid distance formula to calculate the distance between two coordinates in two-dimensional space
+usage method:
+```python
+from Wdata import mathfunc
+xy1 = (2, 3)
+xy2 = (3, 5)
+Result=mathfunc.distance (xy1, xy2) # Distance formula
+print(result)
+```
+
 # What data do we have
 Currently we have the following data
 
