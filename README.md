@@ -128,7 +128,7 @@ Such as the following code
 from Wdata import WdataMain as main
 from Wdata import CSV
 test=main ('Population_growth ') # Import the Population growth in the past 200 years
-test. Save_ File ('Package_test ', CSV) # This function will automatically add the. csv suffix
+test. Save_File ('Package_test ', CSV) # This function will automatically add the. csv suffix
 ```
 
 # Additional Features
