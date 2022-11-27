@@ -36,6 +36,15 @@
 # 下载
 本项目使用Pypi,所以建议使用Pypi下载
 
+有一些依赖库，请将以下代码粘贴到终端
+
+```
+pip3 install simplejson
+pip3 install openpyxl
+pip3 install matplotlib
+pip3 install setuptools
+```
+
 代码：`pip3 install Wdatabase`
 
 # 使用
@@ -51,7 +60,7 @@ from Wdata import WdataMain as main
 |函数|介绍|语法|返回类型|
 |:--------:|:--------:|:--------:|:--------:|
 |draw|绘图|Func()|None|
-|Save_file|保存文档|Func(filename:str)|bool|
+|Save_file|保存文档|Func(filename:str, type='json', Sheet='Data', RowOrColumn=True)|bool|
 ## 导入数据
 Wdata有很多数据集，我们这里使用200年来人口增长数据举例
 
@@ -112,11 +121,13 @@ test.draw()
 ## 数据保存
 你可以使用`Save_file()`函数来保存数据
 
-`Save_file`的语法是`Save_file(filename:str, type=JSON) -> None`
+`Save_file`的语法是`Save_file(filename:str, type='json', Sheet='Data', RowOrColumn=True) -> None`
 
 参数说明：
 `filename`参数是用于说明保存文件
 `type`参数是用于说明文件类型
+`Sheet`只在保存`.xlsx`文件时生效，表示保存的工作表
+`RowOrColumn`只在保存`.xlsx`文件时生效，表示保存的格式
 
 文件类型有以下几个:
 
@@ -124,18 +135,60 @@ test.draw()
 |:---:|:---:|:---:|
 |csv|Wdata.CSV|保存文件`file.csv`|
 |json|Wdata.JSON|保存文件`file.json`，为默认选项|
+|xlsx|Wdata.XLSX|保存文件`file.xlsx`|
 
-如以下代码
+保存`JSON`文件的代码
 
 ```python
 from Wdata import WdataMain as main
 from Wdata import CSV
 test = main('Population_growth')  # 导入200年来人口增长
+test.Save_file('Package_test')  # 默认选项
+```
+
+保存`CSV`文件的代码
+
+```python
+from Wdata import WdataMain as main
+test = main('Population_growth')  # 导入200年来人口增长
 test.Save_file('Package_test', CSV)  # 该函数会自动添加.csv后缀
 ```
 
-# 附加功能
+保存`.xlsx`文件会使用到`Sheet`和`RowOrColumn`参数
 
+`Sheet`表示保存单元格，默认为`Data`
+
+`RowOrColumn`表示保存形式，默认为`True`
+
+```python
+from Wdata import WdataMain as main
+from Wdata import XLSX
+test = main('Population_growth')  # 导入200年来人口增长
+test.Save_file('Package_test', XLSX)  # 该函数会自动添加.xlsx后缀
+# test.Save_file('Package_test', XLSX, RowOrColumn=False)   这条代码会以列的形式保存
+```
+
+当`RowOrColumn`为`True`时，保存形式是这样的
+
+| 1820 |1840 | 1860 | 1880 | 1900 | 1920 | 1940 |1960|1980 | 2000 |2022|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|1100000000|1200000000|1300000000|1400000000|1650000000|1800000000|2200000000|3000000000|4400000000|5900000000|7400000000|
+
+反之，是这样的
+
+| 1820 | 1100000000 | 
+|:---:|:---:|
+|1840 |1200000000|
+|1860|1300000000|
+|1880|1400000000|
+|1900|1650000000|
+|1920|1800000000|
+|1940|2200000000|
+|1960|3000000000|
+|1980|4400000000|
+|2000|5900000000|
+|2022|7400000000|
+# 附加功能
 ## 余弦相似度函数
 
 余弦相似度函数可以根据余弦相似度公式计算出二维空间中两个坐标的余弦相似度

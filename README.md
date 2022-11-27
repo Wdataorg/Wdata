@@ -33,9 +33,18 @@
 
 This project is a dataset with multiple functions, there are many datasets in it, and it has been uploaded to Pypi.
 
+
+
 # Download
 This project uses Pypi, so it is recommended to use Pypi to download
+There are some dependent libraries, please paste the following code into the terminal
 
+```
+pip3 install simplejson
+pip3 install openpyxl
+pip3 install matplotlib
+pip3 install setuptools
+```
 Code: `pip3 install Wdatabase`
 
 # Use
@@ -51,7 +60,7 @@ The main class has the following functions:
 | Functions | Introduction |       Syntax       | Return Type |
 |:---------:|:------------:|:------------------:|:-----------:|
 |   draw    |    Draw      |      Func()        |    None     |
-| Save_file |  Save file   | Func(filename:str) |    bool     |
+| Save_file |  Save file   | Func(filename:str, type='json', Sheet='Data', RowOrColumn=True)                 |    bool     |
 ## Import Data
 Wdata has a lot of data sets, here we use 200 years of population growth data as an example
 
@@ -112,25 +121,73 @@ The result is this
 ## Data save
 You can use the `Save_file()` function to save data
 
-The syntax of `Save_file` is `Save_file(filename:str, type=JSON) -> None`
+The syntax of `Save_file` is `Save_file(filename:str, type=JSON, Sheet='Data',RowOrColumn=True) -> None`
 
 Parameter description:
 The `filename` 'parameter is used to describe saving a file
 The `type` 'parameter is used to describe the file type
+`Sheet` only takes effect when saving a `.xlsx` file, representing a saved worksheet
+
+`RowOrColumn` only takes effect when saving a `.xlsx` file, indicating the saved format
 The file types are as follows:
 
 |File Type | Usage | Description|
 |:---:|:---:|:---:|
-|Csv | Wdata. CSV | Save File ` file.csv`|
-|Json | Wdata. JSON | Save the file 'file. json' as the default option|
+|Csv | Wdata.CSV | Save File ` file.csv`|
+|Json | Wdata.JSON | Save the file `file. json` as the default option|
+|XLSX|Wdata.XLSX|Save File `file.xlsx`|
+
 Such as the following code
+
 ```python
 from Wdata import WdataMain as main
-from Wdata import CSV
-test=main ('Population_growth ') # Import the Population growth in the past 200 years
-test. Save_File ('Package_test ', CSV) # This function will automatically add the. csv suffix
+test = main('Population_growth') 
+test. Save_file('Package_test') # Default option
 ```
 
+Save the code for the `CSV` file
+
+```python
+from Wdata import WdataMain as main
+from Wdata import XLSX
+test = main('Population_growth') # Population growth over the past 200 years
+test. Save_file('Package_test', CSV) # The function automatically adds .csv suffix
+```
+
+Saving `.xlsx` files uses the `Sheet` and `RowOrColumn` parameters
+
+`Sheet` means save cell, which defaults to `Data`
+
+`RowOrColumn` means saved form, defaulting to `True`
+
+```python
+from Wdata import WdataMain as main
+from Wdata import XLSX
+test = main('Population_growth') # Population growth over the past 200 years
+test. Save_file('Package_test', XLSX) # This function automatically adds .xlsx suffix
+# test. Save_file('Package_test', XLSX, RowOrColumn=False) This code is saved as a column
+```
+
+When `RowOrColumn` is `True`, the saved form looks like this
+
+| 1820 |1840 | 1860 | 1880 | 1900 | 1920 | 1940 |1960|1980 | 2000 |2022|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|1100000000|1200000000|1300000000|1400000000|1650000000|1800000000|2200000000|3000000000|4400000000|5900000000|7400000000|
+
+On the contrary, it is like this
+
+| 1820 | 1100000000 | 
+|:---:|:---:|
+|1840 |1200000000|
+|1860|1300000000|
+|1880|1400000000|
+|1900|1650000000|
+|1920|1800000000|
+|1940|2200000000|
+|1960|3000000000|
+|1980|4400000000|
+|2000|5900000000|
+|2022|7400000000|
 # Additional Features
 ## Cosine similarity function
 The cosine similarity function can calculate the cosine similarity of two coordinates in two-dimensional space according to the cosine similarity formula

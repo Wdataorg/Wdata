@@ -5,5 +5,5 @@ Date: 2022.06.17
 Project Name: Wdata
 """
 
-from .main import WdataMain
+from .main import *
 from . import mathfunc
