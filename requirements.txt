@@ -1,4 +1,4 @@
-setuptools==63.4.2
+setuptools==65.5.1
 matplotlib~=3.5.2
 openpyxl~=3.0.10
 simplejson~=3.17.6
